@@ -2,7 +2,7 @@
     //todo get all thoughts
 //! /api/thoughts
     //todo GET a single thought by id
-    //todo POST to create a new thought and push though id to users thoughts array field
+    //todo POST to create a new thought and push thought id to users thoughts array field
     //todo PUT update thought by id
     //todo DELETE thought by id
     //! /api/thoughts/:thoughtsId/reactions
