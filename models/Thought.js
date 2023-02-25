@@ -28,7 +28,6 @@ const thoughtSchema = new Schema({
     id: false,
 });
 
-    //! schema settings
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });

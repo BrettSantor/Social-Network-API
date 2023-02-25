@@ -8,7 +8,7 @@ const userSchema = new Schema({
     //todo thoughts
     thoughts: [{ type: Schema.Types.ObjectId, ref: 'thought'}],
     //todo friends
-    friends: [{ type: Schema.Types.ObjectId, ref: 'friend'}]
+    friends: [{ type: Schema.Types.ObjectId, ref: 'user'}]
     
 },
 {
