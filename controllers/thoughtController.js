@@ -63,12 +63,14 @@ module.exports = {
           .catch((err) => res.status(500).json(err))
       },
       //? adds a reaction to a single thoughts reactions list
-      addReaction(req,res){
+      createReaction(req,res){
+        Reaction.create(req.body)
+        .then((reaction) => {
         Thought.findOneAndUpdate(
             {_id: req.params.thoughtId},
-            {$addToSet: { reactions: req.params.reactionId}},
+            {$addToSet: { reactions: req.body.reactionId}},
             {runValidators: true, new: true }
-        )
+        )})
         .then((thought) => 
         !thought
         ? res.status(404).json({messge: 'no thought with that id'})
@@ -76,7 +78,7 @@ module.exports = {
         .catch((err) => res.status(500).json(err));
       },
       //? removes friend from list of single user
-      removeReaction(req, res) {
+      deleteReaction(req, res) {
         Thought.findOneAndUpdate(
           { _id: req.params.thoughtId },
           { $pull: { reactions: { reactionId: req.params.reactionId } } },
