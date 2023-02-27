@@ -10,6 +10,7 @@ module.exports = {
     },
     //? gets single user
     getSingleUser(req,res) {
+      //! get friend info
         User.findOne({_id: req.params.userId})
         .select('-__v')
         .then((user) =>

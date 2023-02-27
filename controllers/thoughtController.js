@@ -23,16 +23,16 @@ module.exports = {
         Thought.create(req.body)
         .then((thought) => {
           console.log(thought)
-         User.findOneAndUpdate(
-            {username:req.body.username },
-            {$addToSet: {thoughts: thought._id}},
+        return User.findOneAndUpdate(
+            {_id:req.body.userId },
+            {$push: {thoughts: thought._id}},
             {new:true},
-        )
-        return res.status(200).json(thought)
+        ).then((user) =>{
+        res.status(200).json(thought)})
         })
         .catch((err) => {
             console.log(err);
-            return res.status(500).json(err);
+            res.status(500).json(err);
         });
     },
     //? updates single thought
