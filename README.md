@@ -2,7 +2,7 @@
 ![badmath](https://img.shields.io/badge/license-MIT-blue)
 ![badmath](https://img.shields.io/badge/Built%20With-express-yellow)
 ![badmath](https://img.shields.io/badge/Built%20With-JavaScript-brightgreen)
-![badmath](https://img.shields.io/badge/Built%20With-Mongoose-pink)
+![badmath](https://img.shields.io/badge/Built%20With-Mongoose-red)
 ## description
 [Click this link to watch a video of this application working.](https://drive.google.com/file/d/1lVaXVo3MD4nMJMRpGHTu8NQMt7hmRUHg/view)
 This is an API for a Social Network, it utilizes RESTful routes to create, read, update and delete data such as users and thoughts to a database using Mongoose. 
